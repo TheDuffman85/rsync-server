@@ -3,7 +3,7 @@ set -e
 
 USERNAME=${USERNAME:-user}
 PASSWORD=${PASSWORD:-pass}
-ALLOW=${ALLOW:-192.168.8.0/24 192.168.24.0/24 172.16.0.0/12 127.0.0.1/32}
+ALLOW=${ALLOW:-*}
 VOLUME=${VOLUME:-/data}
 
 if [ "$1" = 'rsync_server' ]; then
@@ -28,7 +28,7 @@ if [ "$1" = 'rsync_server' ]; then
     max connections = 10
     port = 873
 
-    [volume]
+    [data]
         uid = root
         gid = root
         hosts deny = *
