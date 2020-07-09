@@ -22,7 +22,6 @@ if [ "$1" = 'rsync_server' ]; then
     mkdir -p $VOLUME
 
     [ -f /etc/rsyncd.conf ] || cat <<EOF > /etc/rsyncd.conf
-    pid file = /var/run/rsyncd.pid
     log file = /dev/stdout
     timeout = 300
     max connections = 10
