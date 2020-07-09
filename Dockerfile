@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM debian:buster
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG C.UTF-8
 
